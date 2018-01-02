@@ -55,6 +55,7 @@ header{
 }
 .images{
   max-width: 100%;
+  display: block;
 }
 .container{
   background-image: linear-gradient(#279bfa 85%, #f5e2e0 85%);
