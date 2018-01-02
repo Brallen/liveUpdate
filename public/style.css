@@ -1,25 +1,70 @@
 body,html{
-    margin:0;
-    padding:0;
+  margin:0;
+  padding:0;
 }
 a{
   text-decoration: none;
 }
-.site-title{
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    color: black;
-    margin: 0;
-    padding: 10px 30px;
+body{
+  background-color: #f5e2e0;
 }
-
-.code{
-background-color: black;
-}
-
 .hidden{
   display: none;
 }
-
-
-
+header{
+  background-color: #269bfa;
+}
+.sitetitle{
+  display: inline;
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+.sitetitle:hover{
+  color: #269bfa;
+}
+.navbar{
+  float: right;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.navlink a{
+  text-decoration: none;
+  color: white;
+  padding: 0 10px;
+}
+.navlink a:hover{
+  color: #269bfa;
+}
+.navlist{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navitem{
+  display: inline block;
+  float: left;
+  margin-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 3px;
+  font-size: 20px;
+}
+.active.navitem{
+  border-bottom: 3px solid white;
+}
+.images{
+  max-width: 100%;
+}
+.container{
+  background-image: linear-gradient(#279bfa 85%, #f5e2e0 85%);
+}
+.infowrapper{
+  margin:0 15%;
+  display: flex;
+}
+.box{
+  margin-top: 5px;
+  flex-basis: 33%;
+  background-color: white;
+}
