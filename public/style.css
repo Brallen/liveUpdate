@@ -1,4 +1,4 @@
-body,html{
+body, html{
   margin:0;
   padding:0;
 }
@@ -6,19 +6,21 @@ a{
   text-decoration: none;
 }
 body{
-  background-color: #f5e2e0;
+  background-color: #fff6f5;
 }
 .hidden{
   display: none;
 }
-header{
+/* header{
   background-color: #269bfa;
+  padding-top: 10px;
 }
 .sitetitle{
   display: inline;
   text-decoration: none;
   color: white;
   font-family: sans-serif;
+  margin-left: 10px;
 }
 .sitetitle:hover{
   color: #269bfa;
@@ -58,14 +60,15 @@ header{
   display: block;
 }
 .container{
-  background-image: linear-gradient(#279bfa 85%, #f5e2e0 85%);
+  background-image: linear-gradient(#279bfa 85%, #fff6f5 85%);
 }
 .infowrapper{
-  margin:0 15%;
+  margin: 0 31% 0 5%;
+  padding-top: 10px;
   display: flex;
 }
 .box{
   margin-top: 5px;
   flex-basis: 33%;
   background-color: white;
-}
+} */

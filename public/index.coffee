@@ -1,14 +1,107 @@
-styles1 = """
+styles = """
+pre {
+  position: fixed; width: 30%;
+  top: 40px; bottom: 30px; left: 35%;
+  transition: left 500ms;
+  overflow: auto;
+  background-color: #282c35; color: #8b97a4;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 24px 12px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0px 4px 0px 2px rgba(0,0,0,0.1);
+}
+
+
+/*
+ * Colors are based on the One Dark theme
+ * from Atom
+ */
+
+pre em:not(.comment) { font-style: normal; }
+
+.comment       { color: #4a4e56; }
+.selector      { color: #ce8853; }
+.selector .key { color: #ce8853; }
+.key           { color: #8b97a4; }
+.value         { color: #1caebe; }
+
+pre { left: 69%; }
+
+body,html{
+  margin:0;
+  padding:0;
+}
+a{
+  text-decoration: none;
+}
 body{
-   background-color: gray;
-}                        
+  background-color: #fff6f5;
+}
 .hidden{
   display: block;
 }
-p{
-   color: blue;
+header{
+  background-color: #269bfa;
+  padding-top: 10px;
 }
-"""
+.sitetitle{
+  display: inline;
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  margin-left: 10px;
+}
+.sitetitle:hover{
+  color: #269bfa;
+}
+.navbar{
+  float: right;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.navlink a{
+  text-decoration: none;
+  color: white;
+  padding: 0 10px;
+}
+.navlink a:hover{
+  color: #269bfa;
+}
+.navlist{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navitem{
+  display: inline block;
+  float: left;
+  margin-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 3px;
+  font-size: 20px;
+}
+.active.navitem{
+  border-bottom: 3px solid white;
+}
+.images{
+  max-width: 100%;
+  display: block;
+}
+.container{
+  background-image: linear-gradient(#279bfa 85%, #fff6f5 85%);
+}
+.infowrapper{
+  margin: 0 31% 0 5%;
+  padding-top: 10px;
+  display: flex;
+}
+.box{
+  margin-top: 5px;
+  flex-basis: 33%;
+  background-color: white;
+}"""
 
 openComment = false
 
@@ -23,7 +116,7 @@ writeStyleChar = (which) ->
   # wrap style declaration
   else if which == ':'
     styles = $('#style-text').html().replace(/([a-zA-Z- ^\n]*)$/, '<em class="key">$1</em>:')
-  # wrap style value 
+  # wrap style value
   else if which == ';'
     styles = $('#style-text').html().replace(/([^:]*)$/, '<em class="value">$1</em>;')
   # wrap selector
@@ -43,15 +136,6 @@ writeStyles = (message, index, interval) ->
       writeStyles message, index, interval
     ), interval
 
-###
-# appending the tags I'll need.
-$('body').append """
-  <style id="style-tag"></style>
-	<span id="echo"></span>
-	<span id="heart"><i></i></span>
-	<pre id="style-text"></pre>
-"""###
-
 $('body').append """
   <style id="style-tag"></style>
 	<pre id="style-text"></pre>
@@ -59,4 +143,4 @@ $('body').append """
 time = if window.innerWidth <= 578 then 4 else 16
 
 # starting it off
-writeStyles(styles1, 0, time)
+writeStyles(styles, 0, time)
