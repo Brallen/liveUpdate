@@ -49,16 +49,15 @@ header{
   display: inline;
   text-decoration: none;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-left: 10px;
 }
 .sitetitle:hover{
-  color: #269bfa;
+  color: #fff6f5;
 }
 .navbar{
   float: right;
-  font-family: sans-serif;
-  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
 }
 .navlink a{
   text-decoration: none;
@@ -66,7 +65,7 @@ header{
   padding: 0 10px;
 }
 .navlink a:hover{
-  color: #269bfa;
+  color: #fff6f5;
 }
 .navlist{
   list-style-type: none;
