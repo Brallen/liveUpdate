@@ -1,4 +1,4 @@
-body, html{
+/* body, html{
   margin:0;
   padding:0;
 }
@@ -7,7 +7,7 @@ a{
 }
 body{
   background-color: #fff6f5;
-}
+} */
 .hidden{
   display: none;
 }

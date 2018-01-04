@@ -1,7 +1,7 @@
 styles = """
 pre {
   position: fixed; width: 30%;
-  top: 40px; bottom: 30px; left: 35%;
+  top: 48px; bottom: 30px; left: 35%;
   transition: left 500ms;
   overflow: auto;
   background-color: #282c35; color: #8b97a4;
@@ -93,14 +93,23 @@ header{
   background-image: linear-gradient(#279bfa 85%, #fff6f5 85%);
 }
 .infowrapper{
-  margin: 0 31% 0 5%;
+  margin: 0 32% 0 4%;
   padding-top: 10px;
   display: flex;
+  font-family: sans-serif;
 }
 .box{
   margin-top: 5px;
+  padding: 0 10px;
   flex-basis: 33%;
   background-color: white;
+  border-right: 1px #4a4e56;
+}
+.boximage{
+  padding: 0 0 0 10px;
+}
+.box ul{
+  padding-left: 20px;
 }"""
 
 openComment = false
