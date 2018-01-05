@@ -1,10 +1,22 @@
 styles = """
+/*
+ * Oh hello there. Welcome to my website!
+ *                                                                                                
+ * What's going on right now was based on an idea
+ * by Jake Albaugh
+ *                                                         
+ * The site is pretty bland right now as you can
+ * tell so lets change that...                                                                     
+ */
+
 pre {
-  position: fixed; width: 30%;
+  position: fixed;
+  width: 30%;
   top: 48px; bottom: 30px; left: 35%;
   transition: left 500ms;
   overflow: auto;
-  background-color: #282c35; color: #8b97a4;
+  background-color: #282c35;
+  color: #8b97a4;
   border: 1px solid rgba(0,0,0,0.2);
   padding: 24px 12px;
   box-sizing: border-box;
@@ -18,13 +30,31 @@ pre {
  * from Atom
  */
 
-pre em:not(.comment) { font-style: normal; }
+pre em:not(.comment){
+  font-style: normal;
+}
+.comment{
+  color: #4a4e56;
+}
+.selector{
+  color: #ce8853;
+}
+.selector .key{
+  color: #ce8853;
+}
+.key{
+  color: #8b97a4;
+}
+.value{
+  color: #1caebe;
+}
 
-.comment       { color: #4a4e56; }
-.selector      { color: #ce8853; }
-.selector .key { color: #ce8853; }
-.key           { color: #8b97a4; }
-.value         { color: #1caebe; }
+/*
+ * There we go. Now at least I look nice.
+ *                                                    
+ * Let's move me over and then get some more
+ * stuff on this page                                                                              
+ */
 
 pre { left: 69%; }
 
@@ -32,25 +62,39 @@ body,html{
   margin:0;
   padding:0;
 }
-a{
-  text-decoration: none;
-}
 body{
   background-color: #fff6f5;
 }
+
+/*
+ * I'm gonna cheat a little bit here                                                               
+ */
+
 .hidden{
   display: block;
+}
+
+/*
+ * Wow that html came up so fast! It's like
+ * it was premade...                                                                           
+ *
+ * Anyways back to work                                                                      
+ */
+
+a{
+  text-decoration: none;
 }
 header{
   background-color: #269bfa;
   padding-top: 10px;
 }
 .sitetitle{
+  margin-left: 10px;
   display: inline;
   text-decoration: none;
   color: white;
   font-family: 'Roboto', sans-serif;
-  margin-left: 10px;
+  font-size: 2.5em;
 }
 .sitetitle:hover{
   color: #fff6f5;
@@ -60,9 +104,10 @@ header{
   font-family: 'Roboto', sans-serif;
 }
 .navlink a{
+  padding: 0 10px;
   text-decoration: none;
   color: white;
-  padding: 0 10px;
+  font-size: 1.4em;
 }
 .navlink a:hover{
   color: #fff6f5;
@@ -84,6 +129,12 @@ header{
 .active.navitem{
   border-bottom: 3px solid white;
 }
+
+/*
+ * That's not looking to bad now.
+ * Let's get this other part looking nice                                                          
+ */
+
 .images{
   max-width: 100%;
   display: block;
@@ -103,13 +154,29 @@ header{
   flex-basis: 33%;
   background-color: white;
   border-right: 1px #4a4e56;
+  font-size: 1.1em;
 }
 .boximage{
   padding: 0 0 0 10px;
 }
 .box ul{
   padding-left: 20px;
-}"""
+  list-style-type: none;
+}
+.box li{
+  padding-bottom: 5px;
+}
+.box a{
+  color: black;
+}
+
+/*
+ * Hey we did it!
+ *                                                                                 
+ * Feel free to check out the rest of the website
+ * while you're here
+ */
+"""
 
 openComment = false
 
@@ -144,11 +211,6 @@ writeStyles = (message, index, interval) ->
       writeStyles message, index, interval
     ), interval
 
-$('body').append """
-  <style id="style-tag"></style>
-	<pre id="style-text"></pre>
-"""
-time = if window.innerWidth <= 578 then 4 else 16
+time = 16
 
-# starting it off
 writeStyles(styles, 0, time)
