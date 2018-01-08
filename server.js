@@ -10,6 +10,7 @@ var htmlIndex;
 var cssStyle;
 var html404;
 var jsIndex;
+var picture;
 
 /*************** Cache Files ***************/
 //index.html
@@ -32,32 +33,41 @@ fs.readFile('./public/index.js', 'utf8', function(err,data){
    if(err) console.log(err);
    jsIndex = data;
 });
+//image
+fs.readFile('./Images/me.jpeg', function(err,data){
+   if(err) console.log(err);
+   picture = data;
+});
 
 /*************** Set Up Server Responses ***************/
 var server = http.createServer(function (req, res) {
-   console.log(req.url);
-   switch (req.url) {
-      case "/style.css":
-	 res.writeHead(200, {"Content-Type": "text/css"});
-	 res.write(cssStyle);
-	 break;
-      case "/index.js":
-	 res.writeHead(200, {"Content-Type": "text/javascript"});
-	 res.write(jsIndex);
-	 break;
-      case "/":
-	 res.writeHead(200, {"Content-Type": "text/html"});
-	 res.write(htmlIndex);
-	 break;
-      case "/index.html":
-	 res.writeHead(200, {"Content-Type": "text/html"});
-	 res.write(htmlIndex);
-	 break;
-      default:
-	 res.writeHead(404, {"Content-Type": "text/html"});
-	 res.write(html404);
-   }
-   res.end();
+  console.log(req.url);
+  switch (req.url) {
+    case "/style.css":
+      res.writeHead(200, {"Content-Type": "text/css"});
+      res.write(cssStyle);
+      break;
+    case "/index.js":
+      res.writeHead(200, {"Content-Type": "text/javascript"});
+      res.write(jsIndex);
+      break;
+    case "/Images/me.jpeg":
+      res.writeHead(200, {"Content-Type": "image/jpeg"});
+      res.write(picture);
+      break;
+    case "/":
+      res.writeHead(200, {"Content-Type": "text/html"});
+      res.write(htmlIndex);
+      break;
+    case "/index.html":
+      res.writeHead(200, {"Content-Type": "text/html"});
+      res.write(htmlIndex);
+      break;
+    default:
+      res.writeHead(404, {"Content-Type": "text/html"});
+      res.write(html404);
+  }
+  res.end();
 });
 
 /*************** Make Server Listen ***************/
