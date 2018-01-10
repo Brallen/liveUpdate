@@ -11,7 +11,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "coffee -c ./public/index.coffee; coffee -c serverRe.coffee; node serverRe.js",
+    "clean": "rm serverRe.js ./public/index.js"
   },
   "author": "Brett Case",
   "license": "ISC"

@@ -1,12 +1,12 @@
 styles = """
 /*
  * Oh hello there. Welcome to my website!
- *
+ *                                                                              
  * What's going on right now was based on an idea
  * by Jake Albaugh
- *
+ *                                                              
  * The site is pretty bland right now as you can
- * tell so lets change that...
+ * tell so lets change that...                                                  
  */
 
 pre{
@@ -51,9 +51,9 @@ pre em:not(.comment){
 
 /*
  * There we go. Now at least I look nice.
- *
+ *                                                                              
  * Let's move me over and then get some more
- * stuff on this page
+ * stuff on this page                                                                        
  */
 
 pre{
@@ -69,7 +69,7 @@ body{
 }
 
 /*
- * I'm gonna cheat a little bit here
+ * I'm gonna cheat a little bit here                                            
  */
 
 .hidden{
@@ -78,9 +78,9 @@ body{
 
 /*
  * Wow that html came up so fast! It's like
- * it was premade...
+ * it was premade...                                                            
  *
- * Anyways back to work
+ * Anyways back to work                                              
  */
 
 a{
@@ -132,8 +132,8 @@ header{
 }
 
 /*
- * That's not looking to bad now.
- * Let's get this other part looking nice
+ * That's not looking to bad now.                                               
+ * Let's get this other part looking nice                                       
  */
 
 .images{
@@ -172,10 +172,10 @@ header{
 }
 
 /*
- * Hey we did it!
+ * Hey we did it!                                                               
  *
  * Feel free to check out the rest of the website
- * while you're here
+ * while you're here                                                            
  */
 """
 
