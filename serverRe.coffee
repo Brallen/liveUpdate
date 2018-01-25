@@ -7,6 +7,7 @@ port = process.env.PORT
 #these are here so they'll be globals
 htmlIndex = null
 cssStyle = null
+restStyle = null
 html404 = null
 jsIndex = null
 picture = null
@@ -25,6 +26,12 @@ fs.readFile('./public/style.css', 'utf8', (err, data) ->
     if err
       console.log(err)
     cssStyle = data
+)
+#restStyle.css
+fs.readFile('./public/restStyle.css', 'utf8', (err, data) ->
+    if err
+      console.log(err)
+    restStyle = data
 )
 #index.html
 fs.readFile('./public/404.html', 'utf8', (err, data) ->
@@ -55,6 +62,9 @@ server = http.createServer((req, res) ->
     when "/style.css"
       res.writeHead(200, {"Content-Type": "text/css"})
       res.write(cssStyle)
+    when "/restStyle.css"
+      res.writeHead(200, {"Content-Type": "text/css"})
+      res.write(restStyle)
     when "/index.js"
       res.writeHead(200, {"Content-Type": "text/javascript"})
       res.write(jsIndex)

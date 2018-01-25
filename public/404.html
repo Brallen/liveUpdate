@@ -28,8 +28,10 @@
      </header>
       
       <main class="error-container">
-         <h2>404</h2>
-         <h3>Woops!  We couldn't find that page.</h3>
+         <h2><em class="key">res.</em><em class="selector">writeHead</em><em class="key">(</em><em class="value">404, {"Content-Type": "text/html"}</em><em class="key">);</em></h2>
+         <h2><em class="key">res.</em><em class="selector">write</em><em class="key">(</em><em class="value">html404</em><em class="key">);</em></h2>
+         <h2><em class="key">res.</em><em class="selector">end</em><em class="key">();</em></h2>
+         <h3>//Whoops! We couldn't find that page.</h3>
       </main>
 
    </body>
