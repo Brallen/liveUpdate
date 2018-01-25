@@ -212,6 +212,4 @@ writeStyles = (message, index, interval) ->
       writeStyles message, index, interval
     ), interval
 
-time = 16
-
-writeStyles(styles, 0, time)
+writeStyles(styles, 0, 16)
