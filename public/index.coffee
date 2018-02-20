@@ -5,6 +5,9 @@ styles = """
  * What's going on right now was based on an idea
  * by Jake Albaugh
  *                                                              
+ * This website is still in progress but the main
+ * features are here. Have fun checking it out
+ *                                                                       
  * The site is pretty bland right now as you can
  * tell so lets change that...                                                  
  */
