@@ -135,7 +135,7 @@ header{
 }
 
 /*
- * That's not looking to bad now.                                               
+ * That's not looking too bad now.                                               
  * Let's get this other part looking nice                                       
  */
 
