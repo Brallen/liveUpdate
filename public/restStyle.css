@@ -1,7 +1,7 @@
 pre{
   position: fixed;
   width: 30%;
-  top: 48px; bottom: 30px; left: 35%;
+  top: 63px; bottom: 30px; left: 35%;
   transition: left 500ms;
   overflow: auto;
   background-color: #282c35;
