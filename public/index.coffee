@@ -27,7 +27,6 @@ pre{
   box-shadow: 0px 4px 0px 2px rgba(0,0,0,0.1);
 }
 
-
 /*
  * Colors are based on the One Dark theme
  * from Atom
@@ -62,7 +61,6 @@ pre em:not(.comment){
 pre{
   left: 69%;
 }
-
 body,html{
   margin:0;
   padding:0;
@@ -94,8 +92,8 @@ header{
   padding-top: 10px;
 }
 .sitetitle{
-  margin-left: 10px;
-  display: inline;
+  margin:0 0 5px 10px;
+  display: inline-block;
   text-decoration: none;
   color: white;
   font-family: 'Roboto', sans-serif;
@@ -105,6 +103,8 @@ header{
   color: #fff6f5;
 }
 .navbar{
+  margin-top: 5px;
+  margin-right: 5px;
   float: right;
   font-family: 'Roboto', sans-serif;
 }
