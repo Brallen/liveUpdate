@@ -108,7 +108,7 @@ header{
   font-family: sans-serif;
 }
 .box{
-  /* margin-top: 5px; */
+  margin-top: 5px;
   padding: 0 35px;
   flex-basis: 66%;
   background-color: white;
