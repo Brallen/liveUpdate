@@ -17,7 +17,7 @@ pre{
   width: 30%;
   top: 63px; bottom: 30px; left: 35%;
   transition: left 500ms;
-  overflow: auto;
+  overflow: hidden;
   background-color: #282c35;
   color: #8b97a4;
   border: 1px solid rgba(0,0,0,0.2);
